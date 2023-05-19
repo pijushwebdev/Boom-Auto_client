@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
+    console.log(user?.displayName);
+
     const handleLogOut = () => {
         logOut()
         toast.success('Successfully Logout');
@@ -31,7 +33,7 @@ const Navbar = () => {
                                     <>
                                         <li><Link to='my-toys'>My Toys</Link></li>
                                         <li><Link to='add-toy'>Add a Toy</Link></li>
-                                        <li><Link to='my-toys'>profile</Link></li>
+                                        {user?.photoURL && <span className="h-10 w-10 mx-3 cursor-pointer rounded-full"><img className="w-full h-full rounded-full" src={user?.photoURL} alt="image" title={user?.displayName} /></span>}
                                         <li><button onClick={handleLogOut}>Log Out</button></li>
                                     </> :
                                     <>
@@ -56,7 +58,7 @@ const Navbar = () => {
                                     <>
                                         <li><Link to='my-toys'>My Toys</Link></li>
                                         <li><Link to='add-toy'>Add a Toy</Link></li>
-                                        <li><Link to='my-toys'>profile</Link></li>
+                                        {user?.photoURL && <span className="grid place-self-center h-10 w-10 mx-3 cursor-pointer rounded-full"><img className="w-full h-full rounded-full" src={user?.photoURL} alt="image" title={user?.displayName} /></span>}
                                         <li><button onClick={handleLogOut}>Log Out</button></li>
                                     </> :
                                     <>

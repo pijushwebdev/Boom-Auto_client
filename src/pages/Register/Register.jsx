@@ -45,7 +45,7 @@ const Register = () => {
     }
     return (
         <div className='my-6 flex justify-center'>
-            <div className='shadow-md my-10 p-5 lg:w-1/2 w-full'>
+            <div className='shadow-md my-10 p-5'>
                 <form onSubmit={handleRegister} className='flex flex-col items-center'>
 
                     <input className='py-1 mb-5 px-3 rounded-md bg-cyan-800 text-white outline-none' type="text" name='name' id='name' placeholder='Enter name' required />

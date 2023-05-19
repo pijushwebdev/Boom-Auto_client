@@ -1,0 +1,21 @@
+.table th:first-child{
+    position: relative !important;
+}
+
+.table th:nth-child(odd){
+    background-color: #e91a1a20 !important;
+}
+tr:nth-child(even){
+    background-color: #c5aaaa20;
+}
+/* td:nth-child(odd){
+    background-color: #c5aaaa20 ;
+} */
+.table :where(tbody th, tbody td){
+    background-color: inherit;
+}
+
+/* .table:where(:not(.table-zebra)) :where(thead, tbody, tfoot) :where(tr:not(:last-child) :where(th, td)){
+    border-bottom: 0;
+    
+} */

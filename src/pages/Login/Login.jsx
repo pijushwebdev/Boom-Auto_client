@@ -15,7 +15,7 @@ const Login = () => {
 
     const from = location.state?.from?.pathname || '/';
 
-    const { signIn, passwordReset } = useContext(AuthContext);
+    const { signIn, googleSignIn, passwordReset } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSignIn = (e) => {
@@ -31,10 +31,24 @@ const Login = () => {
                 setUser(userEmailPass);
                 toast.success('Successfully Login')
                 console.log(userEmailPass);
-                navigate(from, {replace: true});
+                navigate(from, { replace: true });
             })
             .catch(error => toast.error(error.message))
     }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const signedUser = result.user;
+                setUser(signedUser);
+                navigate(from, { replace: true });
+                toast.success('Successfully Login')
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
+    }
+
     const handlePasswordReset = (e) => {
         const email = emailRef.current.value;
         if (!email) {
@@ -65,7 +79,7 @@ const Login = () => {
                     <p><small>No account? <Link className="hover:border-b-2 hover:border-slate-500 border-b-2 border-transparent transition-all duration-500" to='/register'>SignUp</Link></small></p>
 
                     <div className='mt-5'>
-                        <button className='rounded-md py-2 px-3 border mr-5' ><FaGoogle className="inline mr-2" />Sign in with Google</button>
+                        <button onClick={handleGoogleSignIn} className='rounded-md py-2 px-3 border mr-5' ><FaGoogle className="inline mr-2" />Sign in with Google</button>
                     </div>
 
                 </form>
