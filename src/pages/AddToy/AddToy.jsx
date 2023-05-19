@@ -37,7 +37,7 @@ const AddToy = () => {
         };
         console.log(toy);
 
-        fetch('http://localhost:5000/cars', {
+        fetch('http://localhost:5000/toys', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +48,8 @@ const AddToy = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('add toy successfully')
+                alert('add toy successfully');
+                form.reset();
             }
         })
 
