@@ -1,8 +1,19 @@
 // import React from 'react';
 
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+        toast.success('Successfully Logout');
+    }
+
+
     return (
         <div className="bg-slate-100">
             <div className="navbar bg-base-800">
@@ -15,22 +26,43 @@ const Navbar = () => {
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/blogs'>Blogs</Link></li>
                             <li tabIndex={0}><Link to='all-toys'>All Toys</Link></li>
-                            <li><Link to='my-toys'>My Toys</Link></li>
-                            <li><Link to='add-toy'>Add a Toy</Link></li>
-                            <li><Link to='my-toys'>profile</Link></li>
+                            {
+                                user ?
+                                    <>
+                                        <li><Link to='my-toys'>My Toys</Link></li>
+                                        <li><Link to='add-toy'>Add a Toy</Link></li>
+                                        <li><Link to='my-toys'>profile</Link></li>
+                                        <li><button onClick={handleLogOut}>Log Out</button></li>
+                                    </> :
+                                    <>
+                                        <li><Link to='/login'>Login</Link></li>
+                                    </>
+                            }
+
+                            
                         </ul>
                     </div>
-                    <Link to='/' className="w-32 h-16 rounded-lg"><img className="w-full h-full rounded-lg" src="https://i.ibb.co/0jNTwzm/logocar.png" alt="logo" title="logo" /></Link>
+                    <Link to='/' className="w-32 h-16 rounded-lg"><img className="w-full h-full rounded-lg" src="https://i.ibb.co/mRKNg00/logobgoutf.png" alt="logo" title="logo" /></Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
+
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/blogs'>Blogs</Link></li>
                         <li tabIndex={0}><Link to='all-toys'>All Toys</Link></li>
-                        <li><Link to='/my-toys'>My Toys</Link></li>
-                        <li><Link to='/add-toy'>Add a Toy</Link></li>
-                        <li><Link to='/'>profile</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
+                        
+                        {
+                                user ?
+                                    <>
+                                        <li><Link to='my-toys'>My Toys</Link></li>
+                                        <li><Link to='add-toy'>Add a Toy</Link></li>
+                                        <li><Link to='my-toys'>profile</Link></li>
+                                        <li><button onClick={handleLogOut}>Log Out</button></li>
+                                    </> :
+                                    <>
+                                        <li><Link to='/login'>Login</Link></li>
+                                    </>
+                        }
 
                     </ul>
                 </div>

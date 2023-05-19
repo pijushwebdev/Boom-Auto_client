@@ -4,6 +4,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import AddToy from "../pages/AddToy/AddToy";
 import Blogs from "../pages/Blogs/Blogs";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -21,13 +22,17 @@ const router = createBrowserRouter([
             },
             {
                 path:'add-toy',
-                element:<AddToy></AddToy>
+                element:<PrivateRoute><AddToy></AddToy></PrivateRoute>
             },
             {
                 path:'blogs',
                 element:<Blogs></Blogs>
-            }
+            } 
         ]
+    },
+    {
+        path:'*',
+        element:<div>This is 404 page</div>
     }
 ])
 
