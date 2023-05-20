@@ -16,3 +16,7 @@ tr:nth-child(even){
     border-bottom: 0;
     
 } */
+
+/* .table :where(th, td) {
+    white-space: inherit;
+} */

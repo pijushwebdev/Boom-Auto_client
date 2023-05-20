@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import './AddToy.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { toast } from 'react-toastify';
 
 
 
@@ -35,7 +36,7 @@ const AddToy = () => {
             detailsDescription,
             photoURL
         };
-        console.log(toy);
+        // console.log(toy);
 
         fetch('http://localhost:5000/toys', {
             method: 'POST', 
@@ -48,10 +49,11 @@ const AddToy = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('add toy successfully');
+                toast.success('add toy successfully');
                 form.reset();
             }
         })
+        .catch(error => toast.error(error.message))
 
     }
 

@@ -32,7 +32,7 @@ const MyToys = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th className='text-[#294090] text-center font-bold lg:text-lg'>Toy</th>
+                            <th className='text-[#294090] text-center font-bold lg:text-lg'>Toy Photo</th>
                             <th className='text-[#294090] text-center relative font-bold lg:text-lg'>Seller</th>
                             <th className='text-[#294090] text-center font-bold lg:text-lg'>Seller Email</th>
                             <th className='text-[#294090] text-center font-bold lg:text-lg'>Toy Name</th>
@@ -40,7 +40,7 @@ const MyToys = () => {
                             <th className='text-[#294090] text-center font-bold lg:text-lg'>Price</th>
 
                             <th className='text-[#294090] text-center font-bold lg:text-lg'>Rating</th>
-                            <th className='text-[#294090] text-center font-bold lg:text-lg'></th>
+                            <th className='text-[#294090] text-center font-bold lg:text-lg'>Quantity</th>
                             <th className='text-[#294090] text-center font-bold lg:text-lg'>Description</th>
 
                             <th></th>
@@ -53,6 +53,8 @@ const MyToys = () => {
                             myToys.map(myToy => <MyToyCard
                                 key={myToy._id}
                                 myToy={myToy}
+                                myToys={myToys}
+                                setMyToys={setMyToys}
                             ></MyToyCard>)
                         }
 
