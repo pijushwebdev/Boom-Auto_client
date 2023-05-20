@@ -35,8 +35,9 @@ const ToysDetails = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 my-10">
                 <div className='inset-shadow transition-all duration-1000 p-5 hover:shadow-md hover:shadow-[#294090] rounded-xl'>
-                    <figure>
+                    <figure className='relative sub-category'>
                         <img src={photoURL} alt="toy" className='w-full rounded-xl p-5 hover:shadow-md hover:shadow-[#294090]' />
+                        <span className='absolute hidden hidden-block right-4'>{subCategory}</span>
                     </figure>
                 </div>
 

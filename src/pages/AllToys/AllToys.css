@@ -8,9 +8,6 @@
 tr:nth-child(even){
     background-color: #c5aaaa20;
 }
-/* td:nth-child(odd){
-    background-color: #c5aaaa20 ;
-} */
 .table :where(tbody th, tbody td){
     background-color: inherit;
 }

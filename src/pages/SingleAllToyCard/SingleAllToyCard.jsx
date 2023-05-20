@@ -1,5 +1,4 @@
 import React from 'react';
-import './SingleAllToyCard.css';
 import { Link } from 'react-router-dom';
 
 const SingleAllToyCard = ({ toy }) => {
@@ -17,7 +16,7 @@ const SingleAllToyCard = ({ toy }) => {
 
 
     return (
-        <tr className='hover:shadow-lg border-0'>
+        <tr className='hover:shadow-lg rounded-md border-0'>
             <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'>{sellerName}</td>
             <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'>{toyName}</td>
             <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'>{subCategory}</td>

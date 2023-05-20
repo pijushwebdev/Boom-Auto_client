@@ -1,17 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './AllToys.css'
 import { useLoaderData } from 'react-router-dom';
 import SingleAllToyCard from '../SingleAllToyCard/SingleAllToyCard';
+import { toast } from 'react-toastify';
+import { FaSearch } from 'react-icons/fa';
 
 const AllToys = () => {
 
-    const allToys = useLoaderData();
-    console.log(allToys);
+    const allToy = useLoaderData();
+    // console.log(allToys);
+    const [allToys, setAllToys] = useState(allToy);
+
+    const [searchText, setSearchText] = useState('');
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/toySearch/${searchText}`)
+            .then(res => res.json())
+            .then(data => setAllToys(data))
+            .catch(error => toast.error(error.message))
+    }, [searchText])
 
     return (
-        <>
+        <div className='p-4 md:p-0'>
             <h1 className='text-center font-bold text-[#294090] text-5xl my-10'>BooM Toy Collections</h1>
-                
+
+            <div className='flex justify-center'>
+                <div className='w-full lg:w-1/2 flex items-center relative'>
+                    <input onChange={(e) => setSearchText(e.target.value)} className='text-lg py-2 w-full px-3 border outline-none border-[#1ba7e8] rounded-lg' type="text" />
+                    <span className='absolute text-2xl text-[#1ba7e8] right-3 cursor-pointer'><FaSearch /></span>
+                </div>
+
+            </div>
+
+
             <div className="overflow-x-auto my-10">
                 <table className="table w-full">
                     {/* head */}
@@ -34,11 +55,11 @@ const AllToys = () => {
                                 key={toy._id}
                             ></SingleAllToyCard>)
                         }
-                        
+
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -66,7 +66,7 @@ const AddToy = () => {
 
                     <div className='flex flex-col'>
                         <label className='my-3' htmlFor="toy_photo">Toy Photo</label>
-                        <input className='py-2 px-3 outline-none border border-pink-500 rounded-md focus:shadow-md' type="text" name='toy_photo' id='toy-photo' placeholder='Toy photo Url' required />
+                        <input className='py-2 px-3 outline-none border border-pink-500 rounded-md focus:shadow-md' type="url" name='toy_photo' id='toy-photo' placeholder='Toy photo Url' required />
                     </div>
 
                     <div className='flex flex-col'>
@@ -81,7 +81,12 @@ const AddToy = () => {
 
                     <div className='flex flex-col'>
                         <label className='my-3' htmlFor="sub_category">Sub Category</label>
-                        <input className='py-2 px-3 border-pink-500 outline-none border rounded-md focus:shadow-md' type="text" name='sub_category' id='sub-category' placeholder='Sub Category' required />
+                        <select className='py-2 px-3 border-pink-500 outline-none border rounded-md focus:shadow-md' name="sub_category" id="sub_category">
+                            <option value="Sports_cars">Sports Cars</option>
+                            <option value="Regular_cars">Regular Cars</option>
+                            <option value="Police_cars">Police Car</option>
+                        </select>
+                        {/* <input className='py-2 px-3 border-pink-500 outline-none border rounded-md focus:shadow-md' type="text" name='sub_category' id='sub-category' placeholder='Sub Category' required /> */}
                     </div>
 
                     <div className='flex flex-col'>
