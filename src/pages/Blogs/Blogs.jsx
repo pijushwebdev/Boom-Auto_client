@@ -2,13 +2,13 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='my-10 grid grid-cols-1 md:grid-cols-2 gap-3 p-4 md:p-0'>
+        <div className='inset-shadow p-10  grid grid-cols-1 md:grid-cols-2 gap-3 md:p-0'>
 
-            <div>
+            <div className='p-10'>
                 <img className="w-full rounded-md" src="https://i.ibb.co/MVqQrpV/question.jpg" alt="image" />
             </div>
 
-            <div>
+            <div className='p-10'>
                 <div tabIndex={0} className="collapse collapse-plus border mb-2 border-base-300 bg-base-100 rounded-box">
                     <div className="collapse-title bg-slate-300 text-xl font-medium">
                         <h1><b>Question 1:</b> What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>

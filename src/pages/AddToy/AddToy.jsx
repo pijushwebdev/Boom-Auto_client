@@ -59,7 +59,7 @@ const AddToy = () => {
     }
 
     return (
-        <div className='my-5'>
+        <div className='p-10 inset-shadow'>
             <form onSubmit={handleSubmit} className='m-5 md:m-0'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                     <div className='flex flex-col'>

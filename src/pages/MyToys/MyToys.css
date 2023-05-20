@@ -1,4 +1,4 @@
-/* .btn-hover:hover {
+.btn-hover:hover {
     background-color: #294090;
     color: #1ba7e8;
 }
@@ -8,7 +8,7 @@
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
-} */
+}
 
 .glow-on-hover {
     width: 220px;

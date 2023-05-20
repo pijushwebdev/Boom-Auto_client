@@ -35,8 +35,8 @@ const MyToys = () => {
     }
 
     return (
-        <div className='p-4 md:p-0'>
-            <h1 className='text-center font-bold text-[#294090] text-5xl my-10'>My Toys</h1>
+        <div className='inset-shadow p-4 md:p-0'>
+            <h1 className='text-center font-bold text-[#294090] text-5xl p-10'>My Toys</h1>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3 place-items-center'>
                <button onClick={handleAscending} className='glow-on-hover text-lg font-bold'>Ascending</button>
@@ -45,7 +45,7 @@ const MyToys = () => {
             </div>
 
 
-            <div className="overflow-x-auto my-10">
+            <div className="overflow-x-auto mt-10 py-5">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
