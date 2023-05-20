@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import MyToyCard from './MyToyCard';
+import './MyToys.css';
+
+import { toast } from 'react-toastify';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -17,13 +20,28 @@ const MyToys = () => {
             })
     }, [user])
 
+    const handleAscending = () => {
+        fetch(`http://localhost:5000/ascending?email=${user?.email}`)
+        .then(res => res.json())
+        .then(data => setMyToys(data))
+        .catch(error => toast.error(error.message))
+    }
+
+    const handleDescending = () => {
+        fetch(`http://localhost:5000/descending?email=${user?.email}`)
+        .then(res => res.json())
+        .then(data => setMyToys(data))
+        .catch(error => toast.error(error.message))
+    }
 
     return (
         <div className='p-4 md:p-0'>
             <h1 className='text-center font-bold text-[#294090] text-5xl my-10'>My Toys</h1>
 
-            <div className='flex justify-center'>
-                <input className='text-lg py-2 w-full lg:w-1/2 px-3 border outline-none border-[#1ba7e8] rounded-lg' type="search" />
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-3 place-items-center'>
+               <button onClick={handleAscending} className='glow-on-hover text-lg font-bold'>Ascending</button>
+               <button onClick={handleDescending} className='glow-on-hover text-lg font-bold'>Descending</button>
+                
             </div>
 
 

@@ -17,7 +17,8 @@ const MyToyUpdate = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
-        const price = form.price.value;
+        const prices = form.price.value;
+        const price = parseFloat(prices);
         const availableQuantity = form.available_quantity.value;
         const detailsDescription = form.details_description.value;
 
