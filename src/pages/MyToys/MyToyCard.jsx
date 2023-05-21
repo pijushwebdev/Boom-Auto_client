@@ -14,7 +14,7 @@ const MyToyCard = ({myToy,setMyToys,myToys}) => {
         sellerName,
         subCategory,
         toyName,
-        _id } = myToy;
+        _id } = myToy || {};
 
         const handleDelete = (_id) => {
             Swal.fire({

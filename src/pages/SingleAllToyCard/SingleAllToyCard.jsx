@@ -12,7 +12,7 @@ const SingleAllToyCard = ({ toy }) => {
         sellerName,
         subCategory,
         toyName,
-        _id } = toy;
+        _id } = toy || {};
 
 
     return (

@@ -10,6 +10,7 @@ import ToysDetails from "../pages/ToysDetails/ToysDetails";
 import MyToys from "../pages/MyToys/MyToys";
 import MyToyUpdate from "../pages/myToyUpdate/MyToyUpdate";
 import Home from "../pages/Home/Home/Home";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
     },
     {
         path:'*',
-        element:<div>This is 404 page</div>
+        element:<ErrorPage></ErrorPage>
     }
 ])
 
