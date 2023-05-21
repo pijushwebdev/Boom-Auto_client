@@ -62,7 +62,7 @@ const Navbar = () => {
                                 <>
                                     <li className='font-bold text-[#294090]'><ActiveLink to='myToys'>My Toys</ActiveLink></li>
                                     <li className='font-bold text-[#294090]'><ActiveLink to='add-toy'>Add a Toy</ActiveLink></li>
-                                    {user?.photoURL && <span className="grid place-self-center h-10 w-10 mx-3 cursor-pointer rounded-full"><img className="w-full h-full rounded-full" referrerpolicy="no-referrer" src={user?.photoURL} alt="image" title={user?.displayName} /></span>}
+                                    {user?.photoURL ? <span className="grid place-self-center h-10 w-10 mx-3 cursor-pointer rounded-full"><img className="w-full h-full rounded-full" referrerpolicy="no-referrer" src={user?.photoURL} alt="image" title={user?.displayName} /></span>: <span className="grid place-self-center h-10 w-10 mx-3 cursor-pointer rounded-full"><img className="w-full h-full rounded-full" referrerpolicy="no-referrer" src='https://i.ibb.co/BqBLYwL/userpng.png' alt="image" title={user?.displayName} /></span>}
                                     <li className='font-bold text-[#294090]'><button onClick={handleLogOut}>Log Out</button></li>
                                 </> :
                                 <>
