@@ -28,7 +28,7 @@ const MyToyCard = ({myToy,setMyToys,myToys}) => {
             }).then((result) => {
                 if (result.isConfirmed) {
     
-                    fetch(`http://localhost:5000/myToys/${_id}`, {
+                    fetch(`https://boom-auto-server.vercel.app/myToys/${_id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())

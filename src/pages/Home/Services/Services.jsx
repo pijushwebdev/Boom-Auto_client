@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import "aos/dist/aos.css";
+
+
+import AOS from "aos";
+
 
 const Services = () => {
+
+    useEffect(() => {
+        AOS.init();
+      }, []);
+      
+      
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 my-10 lg:grid-cols-4 gap-3 place-content-center'>
-            <div data-aos="fade-down-right" data-aos-duration="2000" className='p-5 flex flex-col shadow-md rounded-lg justify-center items-center'>
+        <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2000" className='grid grid-cols-1 md:grid-cols-2 my-10 lg:grid-cols-4 gap-3 place-content-center'>
+            <div className='p-5 flex flex-col shadow-md rounded-lg justify-center items-center'>
                 <div className='w-32 h-32'>
                     <img className='w-full' src="https://i.ibb.co/Fzrj4L7/delivery.png" alt="" />
                 </div>
