@@ -3,6 +3,8 @@ import Banner from './Banner';
 import Gallery from './Gallery';
 import { Helmet } from 'react-helmet-async';
 import SubCategory from '../SubCategoty/SubCategory';
+import Services from '../Services/Services';
+import Partner from '../Partner/Partner';
 
 
 const Home = () => {
@@ -14,6 +16,8 @@ const Home = () => {
            <Banner></Banner>
            <Gallery></Gallery>
            <SubCategory></SubCategory>
+           <Services></Services>
+           <Partner></Partner>
         </div>
     );
 };
