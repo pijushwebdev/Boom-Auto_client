@@ -9,7 +9,7 @@ const SubCategory = () => {
     const [activeTab, setActiveTab] = useState('');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/all-toys/${activeTab}`)
+        fetch(`http://localhost:5000/allToys/${activeTab}`)
             .then(res => res.json())
             .then(data => setAllToys(data))
             .catch(error => toast.error(error.message))

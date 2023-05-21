@@ -27,11 +27,11 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li className='font-bold text-[#294090]'><ActiveLink to='/'>Home</ActiveLink></li>
                             <li className='font-bold text-[#294090]'><ActiveLink to='/blogs'>Blogs</ActiveLink></li>
-                            <li className='font-bold text-[#294090]' tabIndex={0}><ActiveLink to='all-toys'>All Toys</ActiveLink></li>
+                            <li className='font-bold text-[#294090]' tabIndex={0}><ActiveLink to='allToys'>All Toys</ActiveLink></li>
                             {
                                 user ?
                                     <>
-                                        <li className='font-bold text-[#294090]'><ActiveLink to='my-toys'>My Toys</ActiveLink></li>
+                                        <li className='font-bold text-[#294090]'><ActiveLink to='myToys'>My Toys</ActiveLink></li>
                                         <li className='font-bold text-[#294090]'><ActiveLink to='add-toy'>Add a Toy</ActiveLink></li>
                                         {user?.photoURL && <span className="h-10 w-10 mx-3 cursor-pointer rounded-full"><img className="w-full h-full rounded-full" src={user?.photoURL} alt="image" title={user?.displayName} /></span>}
                                         <li className='font-bold text-[#294090]'><button onClick={handleLogOut}>Log Out</button></li>
@@ -55,12 +55,12 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li className='font-bold text-[#294090]'><ActiveLink to='/'>Home</ActiveLink></li>
                         <li className='font-bold text-[#294090]'><ActiveLink to='/blogs'>Blogs</ActiveLink></li>
-                        <li className='font-bold text-[#294090]' tabIndex={0}><ActiveLink to='all-toys'>All Toys</ActiveLink></li>
+                        <li className='font-bold text-[#294090]' tabIndex={0}><ActiveLink to='allToys'>All Toys</ActiveLink></li>
 
                         {
                             user ?
                                 <>
-                                    <li className='font-bold text-[#294090]'><ActiveLink to='my-toys'>My Toys</ActiveLink></li>
+                                    <li className='font-bold text-[#294090]'><ActiveLink to='myToys'>My Toys</ActiveLink></li>
                                     <li className='font-bold text-[#294090]'><ActiveLink to='add-toy'>Add a Toy</ActiveLink></li>
                                     {user?.photoURL && <span className="grid place-self-center h-10 w-10 mx-3 cursor-pointer rounded-full"><img className="w-full h-full rounded-full" referrerpolicy="no-referrer" src={user?.photoURL} alt="image" title={user?.displayName} /></span>}
                                     <li className='font-bold text-[#294090]'><button onClick={handleLogOut}>Log Out</button></li>

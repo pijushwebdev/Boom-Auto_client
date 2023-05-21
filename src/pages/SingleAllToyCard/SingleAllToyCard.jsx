@@ -22,7 +22,7 @@ const SingleAllToyCard = ({ toy }) => {
             <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'>{subCategory}</td>
             <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'>$ {price}</td>
             <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'>{availableQuantity}</td>
-            <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'><Link to={`/all-toys/${_id}`}><button className='px-3 py-2 hover:bg-[#294090] hover:shadow-lg transition-all duration-700 hover:text-[#03a3e6] rounded-md font-bold text-[#294090] border border-[#03a3e6]'>View Details</button></Link></td>
+            <td className='text-[#03a3e6] font-bold text-center text-base lg:text-lg'><Link to={`/allToys/${_id}`}><button className='px-3 py-2 hover:bg-[#294090] hover:shadow-lg transition-all duration-700 hover:text-[#03a3e6] rounded-md font-bold text-[#294090] border border-[#03a3e6]'>View Details</button></Link></td>
         </tr>
     );
 };
