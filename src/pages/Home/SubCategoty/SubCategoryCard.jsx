@@ -33,7 +33,7 @@ const SubCategoryCard = ({ toys }) => {
 
 
                     <div className="card-actions mt-5 justify-end">
-                        <button className="py-2 w-full px-3 bg-cyan-600 hover:bg-cyan-800 text-slate-300 rounded-md">View Details</button>
+                        <button to={`allToys/${_id}`} className="py-2 w-full px-3 bg-cyan-600 hover:bg-cyan-800 text-slate-300 rounded-md">View Details</button>
                     </div>
                 </div>
             </div>
