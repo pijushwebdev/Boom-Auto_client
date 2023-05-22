@@ -28,7 +28,7 @@ const MyToyCard = ({myToy,setMyToys,myToys}) => {
             }).then((result) => {
                 if (result.isConfirmed) {
     
-                    fetch(`https://boom-auto-server.vercel.app/myToys/${_id}`, {
+                    fetch(`http://localhost:5000/deleteToy/${_id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())
@@ -59,7 +59,7 @@ const MyToyCard = ({myToy,setMyToys,myToys}) => {
             <td className='text-[#03a3e6] whitespace-normal text-center'>{detailsDescription}</td>
             <td className='text-[#03a3e6] font-bold whitespace-normal text-center text-base lg:text-lg'>
                 <span className='flex flex-col'>
-                <Link title='Edit' className='mb-3' to={`/myToys/${_id}`}><button className='px-3 py-2 hover:bg-[#294090] hover:shadow-lg transition-all duration-700 hover:text-[#03a3e6] rounded-md font-bold text-[#294090] border border-[#03a3e6]'><span><FaPenNib/></span></button></Link>
+                <Link title='Edit' className='mb-3' to={`/updateMyToys/${_id}`}><button className='px-3 py-2 hover:bg-[#294090] hover:shadow-lg transition-all duration-700 hover:text-[#03a3e6] rounded-md font-bold text-[#294090] border border-[#03a3e6]'><span><FaPenNib/></span></button></Link>
                 
                 <button onClick={() => handleDelete(_id)} className='px-3 py-2 hover:bg-[#294090] hover:shadow-lg transition-all duration-700 hover:text-[#03a3e6] rounded-md font-bold text-[#294090] border border-[#03a3e6]'><span><FaRegTrashAlt/></span></button>
                 </span>

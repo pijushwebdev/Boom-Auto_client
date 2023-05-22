@@ -8,12 +8,14 @@ const MyToyUpdate = () => {
     const myToy = useLoaderData();
     // console.log(myToy);
 
+    
+
     const {
         availableQuantity,
         detailsDescription,
         price,
         sellerEmail,
-        _id } = myToy || {};
+        _id } = myToy;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,7 +32,7 @@ const MyToyUpdate = () => {
             detailsDescription
         };
 
-        fetch(`https://boom-auto-server.vercel.app/myToys/${_id}`, {
+        fetch(`http://localhost:5000/updateMyToys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

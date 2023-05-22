@@ -37,21 +37,21 @@ const router = createBrowserRouter([
             {
                 path:'/allToys',
                 element:<AllToys></AllToys>,
-                loader: () => fetch('https://boom-auto-server.vercel.app/allToys')
+                loader: () => fetch('http://localhost:5000/allToys')
             },
             {
                 path:'allToys/:id',
                 element:<PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`https://boom-auto-server.vercel.app/allToys/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
             },
             {
                 path:'/myToys',
                 element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
             },
             {
-                path:'/myToys/:id',
+                path:'/updateMyToys/:id', //myToys
                 element:<PrivateRoute><MyToyUpdate></MyToyUpdate></PrivateRoute>,
-                loader:({params}) => fetch(`https://boom-auto-server.vercel.app/myToys/${params.id}`)
+                loader:({params}) => fetch(`http://localhost:5000/updateMyToys/${params.id}`)
             },
             {
                 path:'blogs',

@@ -40,7 +40,7 @@ const AddToy = () => {
         };
         // console.log(toy);
 
-        fetch('https://boom-auto-server.vercel.app/toys', {
+        fetch('http://localhost:5000/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

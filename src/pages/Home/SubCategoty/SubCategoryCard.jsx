@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const SubCategoryCard = ({ toys }) => {
 
@@ -22,7 +23,7 @@ const SubCategoryCard = ({ toys }) => {
                 </div>
 
                 <div className="card-body h-72 overflow-hidden rounded-xl p-4">
-                    <h2 className="card-title text-[#294090] p-0 m-0">Toy Name: {toyName}</h2>
+                    <h2 className="card-title text-[#294090] p-0 m-0">Toy Name: {toyName.slice(0,20)}</h2>
                     <p className='text-slate-500 p-0 m-0'>Available Quantity: {availableQuantity}</p>
                     <p className='text-slate-500 p-0 m-0'>Seller: {sellerName}</p>
                     <div className='flex items-center'>
@@ -33,7 +34,7 @@ const SubCategoryCard = ({ toys }) => {
 
 
                     <div className="card-actions mt-5 justify-end">
-                        <button to={`allToys/${_id}`} className="py-2 w-full px-3 bg-cyan-600 hover:bg-cyan-800 text-slate-300 rounded-md">View Details</button>
+                        <Link to={`/allToys/${_id}`} className="py-2 text-center w-full px-3 bg-cyan-600 hover:bg-cyan-800 text-slate-300 rounded-md">View Details</Link>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const SubCategory = () => {
     const [activeTab, setActiveTab] = useState('');
 
     useEffect(() => {
-        fetch(`https://boom-auto-server.vercel.app/allToys/${activeTab}`)
+        fetch(`http://localhost:5000/category/${activeTab}`)
             .then(res => res.json())
             .then(data => setAllToys(data))
             .catch(error => toast.error(error.message))

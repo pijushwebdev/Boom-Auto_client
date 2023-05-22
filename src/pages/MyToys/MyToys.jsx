@@ -13,7 +13,7 @@ const MyToys = () => {
 
 
     useEffect(() => {
-        fetch(`https://boom-auto-server.vercel.app/myToys/${user?.email}`)
+        fetch(`http://localhost:5000/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -22,14 +22,14 @@ const MyToys = () => {
     }, [user])
 
     const handleAscending = () => {
-        fetch(`https://boom-auto-server.vercel.app/ascending?email=${user?.email}`)
+        fetch(`http://localhost:5000/ascending?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
             .catch(error => toast.error(error.message))
     }
 
     const handleDescending = () => {
-        fetch(`https://boom-auto-server.vercel.app/descending?email=${user?.email}`)
+        fetch(`http://localhost:5000/descending?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
             .catch(error => toast.error(error.message))
