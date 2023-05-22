@@ -3,8 +3,8 @@ import Marquee from 'react-fast-marquee';
 
 const Partner = () => {
     return (
-        <div className='my-10'>
-            <h1 className='text-4xl font-bold text-center my-5'>Partners And Toys</h1>
+        <div className='mt-10 mb-20'>
+            <h1 className='text-4xl font-bold text-[#294090] text-center my-16'>Partners And Toys</h1>
             <Marquee className='ms-2' pauseOnHover speed={100}>
                 <div className='flex'>
                     <img className='w-32 h-32 mr-2' src="https://i.ibb.co/1Z83G3p/1.gif" alt="" />

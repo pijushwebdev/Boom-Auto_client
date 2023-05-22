@@ -15,7 +15,7 @@ const AllToys = () => {
     const [searchText, setSearchText] = useState('');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toySearch/${searchText}`)
+        fetch(`https://boom-auto-server.vercel.app/toySearch/${searchText}`)
             .then(res => res.json())
             .then(data => setAllToys(data))
             .catch(error => toast.error(error.message))

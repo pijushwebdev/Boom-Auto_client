@@ -32,7 +32,7 @@ const MyToyUpdate = () => {
             detailsDescription
         };
 
-        fetch(`http://localhost:5000/updateMyToys/${_id}`, {
+        fetch(`https://boom-auto-server.vercel.app/updateMyToys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
