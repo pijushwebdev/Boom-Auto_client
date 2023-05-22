@@ -15,7 +15,8 @@ const MyToyUpdate = () => {
         detailsDescription,
         price,
         sellerEmail,
-        _id } = myToy;
+        toyName,
+        _id } = myToy || {};
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -57,6 +58,7 @@ const MyToyUpdate = () => {
                 <title>Update Toy | BOOM Auto</title>
             </Helmet>
             <div className='my-5'>
+            <h1 className='text-4xl font-bold text-[#294090] text-center my-10'>Update Toy Info: {toyName}</h1>
                 <form onSubmit={handleSubmit} className='m-5 md:m-0'>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
 
