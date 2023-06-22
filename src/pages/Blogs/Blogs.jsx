@@ -7,9 +7,9 @@ const Blogs = () => {
             <Helmet>
                 <title>Blogs | BOOM Auto</title>
             </Helmet>
-            <div className='inset-shadow p-10  grid grid-cols-1 md:grid-cols-2 gap-3 md:p-0'>
+            <div className='p-10  grid grid-cols-1 md:grid-cols-2 gap-3 md:p-0'>
 
-                <div className='p-10 shadow-lg inset-shadow'>
+                <div className='p-10 shadow-lg'>
                     <img className="w-full hover:shadow-lg rounded-md" src="https://i.ibb.co/JcQNgm5/20603158-6334185.jpg" alt="image" />
                 </div>
 

@@ -26,7 +26,7 @@ const AllToys = () => {
         <Helmet>
             <title>All Toys | BOOM Auto</title>
         </Helmet>
-            <div className='p-4 md:p-0 inset-shadow'>
+            <div className='p-4 md:p-0'>
                 <h1 className='text-center font-bold text-[#294090] text-5xl py-10'>BooM Toy Collections</h1>
 
                 <div className='flex justify-center'>

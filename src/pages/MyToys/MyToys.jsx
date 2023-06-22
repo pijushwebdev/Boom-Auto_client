@@ -42,7 +42,7 @@ const MyToys = () => {
                     My Toys | BOOM Auto
                 </title>
             </Helmet>
-            <div className='inset-shadow p-4 md:p-0'>
+            <div className=' p-4 md:p-0'>
                 <h1 className='text-center font-bold text-[#294090] text-5xl p-10'>My Toys</h1>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-3 place-items-center'>

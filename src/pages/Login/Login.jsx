@@ -66,11 +66,11 @@ const Login = () => {
             <Helmet>
                 <title>Login | BOOM Auto</title>
             </Helmet>
-            <div className="inset-shadow grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div className='p-10 order-2 inset-shadow hover:shadow-xl'>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className='p-10 order-2  hover:shadow-xl'>
                     <img className='hover:shadow-lg' src="https://i.ibb.co/Ldb8ZC8/4957412-Mobile-login-Cristina.jpg" alt="" />
                 </div>
-                <div className='inset-shadow hover:shadow-xl'>
+                <div className=' hover:shadow-xl'>
                     <form onSubmit={handleSignIn} className='hover:shadow-xl flex h-full flex-col shadow-md p-10 justify-center items-center '>
 
                         <input className='py-2 w-1/2  px-3 font-bold rounded-md bg-[#107aa7] text-[#dfe2ec] outline-none' ref={emailRef} type="email" name='email' id='email' placeholder='Enter email' required />

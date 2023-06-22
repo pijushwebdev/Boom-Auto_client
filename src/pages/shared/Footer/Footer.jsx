@@ -27,7 +27,7 @@ const Footer = () => {
                     <Link to='/' className="link link-hover">Cookie policy</Link>
                 </div>
             </footer>
-            <footer className="inset-shadow-2 footer md:place-content-between  place-content-center px-10 py-4 bg-slate-500 text-slate-300 border-base-300">
+            <footer className="-2 footer md:place-content-between  place-content-center px-10 py-4 bg-slate-500 text-slate-300 border-base-300">
                 <div className="items-center grid-flow-col">
                     <img className="w-20 h-10 rounded-md" src="https://i.ibb.co/0jNTwzm/logocar.png" alt="" />
                     <p>BOOM Autos Industries Ltd. <br />Providing reliable toy cars since 1997</p>

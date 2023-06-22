@@ -17,8 +17,8 @@ const SubCategoryCard = ({ toys }) => {
 
     return (
         <div className="card my-10 hover:shadow-lg glass">
-            <div className='inset-shadow-2 rounded-xl'>
-                <div className='inset-shadow rounded-xl p-4'>
+            <div className='rounded-xl'>
+                <div className='rounded-xl p-4'>
                     <figure><img className='m-0 w-56 h-56' src={photoURL} alt="car!" /></figure>
                 </div>
 
