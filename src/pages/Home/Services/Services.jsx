@@ -13,7 +13,7 @@ const Services = () => {
 
 
     return (
-        <>  
+        <div className='container mx-auto'>  
             <h1 className='text-4xl font-bold text-[#294090] text-center my-10'>Services</h1>
             <div data-aos="fade-right" data-aos-delay="600" data-aos-once="false" data-aos-easing="linear" data-aos-duration="3000" className='grid grid-cols-1 md:grid-cols-2 my-10 lg:grid-cols-4 gap-3 place-content-center'>
                 <div className='p-5 flex flex-col shadow-md rounded-lg justify-center items-center'>
@@ -69,7 +69,7 @@ const Services = () => {
 
                 </div>
             </div>
-        </>
+        </div>
 
     );
 };

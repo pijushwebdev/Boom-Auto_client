@@ -8,12 +8,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Main = () => {
     return (
-        <div className="container mx-auto">
+        <>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
             <ToastContainer/>
-        </div>
+        </>
     );
 };
 

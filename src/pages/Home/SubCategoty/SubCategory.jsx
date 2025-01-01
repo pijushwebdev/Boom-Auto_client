@@ -20,7 +20,7 @@ const SubCategory = () => {
     }
 
     return (
-        <Tabs>
+        <Tabs className={`container mx-auto`}>
             <TabList>
                 <Tab onClick={() => handleTabClick('')}>Toy Cars</Tab>
             </TabList>
