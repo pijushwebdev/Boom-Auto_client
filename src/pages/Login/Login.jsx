@@ -79,7 +79,7 @@ const Login = () => {
             className="hover:shadow-xl flex h-full flex-col shadow-md p-10 justify-center items-center "
           >
             <input
-              className="py-2 lg:w-1/2 md:w-3/4 w-2/3 px-3 font-semibold rounded-md bg-[#fafafa] border focus:border focus:border-gray-500 text-[#0c0f1a] outline-none"
+              className="py-2 lg:w-1/2 md:w-3/4 w-full px-3 font-semibold rounded-md bg-[#fafafa] border focus:border focus:border-gray-500 text-[#0c0f1a] outline-none"
               ref={emailRef}
               type="email"
               name="email"
@@ -88,7 +88,7 @@ const Login = () => {
               required
             />
             <input
-              className="my-5 py-2 lg:w-1/2 md:w-3/4 w-2/3 px-3 font-semibold rounded-md bg-[#fafafa] border focus:border focus:border-gray-500 text-[#0c0f1a] outline-none"
+              className="my-5 py-2 lg:w-1/2 md:w-3/4 w-full px-3 font-semibold rounded-md bg-[#fafafa] border focus:border focus:border-gray-500 text-[#0c0f1a] outline-none"
               type="password"
               name="password"
               id="password"
@@ -97,7 +97,7 @@ const Login = () => {
             />
 
             <input
-              className=" py-2 lg:w-1/2 md:w-3/4 w-2/3 px-3 font-semibold border-[#03a3e6] cursor-pointer border rounded-md"
+              className=" py-2 lg:w-1/2 md:w-3/4 w-full px-3 font-semibold border-[#03a3e6] cursor-pointer border rounded-md"
               type="submit"
               value="SignIn"
             />
